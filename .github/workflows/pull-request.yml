@@ -60,7 +60,7 @@ jobs:
         with:
           python-version: "3.9.0-alpha - 3.9.0" # SemVer's version range syntax
       - name: Install requirements.txt
-        run: pip install -r requirements.txt
+        run: pip install -r https://github.com/pankaj51/Pj-practice/blob/main/requirements.txt
       - name: Install robot framework
         run: pip install robotframework
       - name: Install robot framework selenium library
