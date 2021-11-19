@@ -40,19 +40,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: download actions 
-        #         run: mkdir e2e
-        #       - name: Navigate to E2E folder
-        #         run: cd ./e2e
-        #       - name: Cloning automation repository
-        #         run: git clone "https://github.com/houseworksinc/emr-frontend-automation.git"
         uses: actions/checkout@v2
+      - name: create folder 
+        run: mkdir e2e
+      - name: Navigate to E2E folder
+        run: cd e2e
+      - name: Cloning automation repository
+        run: git clone "https://github.com/pankaj51/Pj-practice.git"
+        
         # with:
           # repository: pankaj51/Pj-practice
       #           path: ./e2e
-      - name: download pj repo
-        uses: pankaj51/CI@main
-        with: 
-          github_token: ${{ secrets.G_ACCESS_TOKEN }}
+#       - name: download pj repo
+#         uses: pankaj51/CI@main
+#         with: 
+#           github_token: ${{ secrets.G_ACCESS_TOKEN }}
       - name: Python setup
         uses: actions/setup-python@v2
         with:
