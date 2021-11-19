@@ -45,7 +45,7 @@ jobs:
         #         run: cd ./e2e
         #       - name: Cloning automation repository
         #         run: git clone "https://github.com/houseworksinc/emr-frontend-automation.git"
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
         # with:
           # repository: pankaj51/Pj-practice
       #           path: ./e2e
