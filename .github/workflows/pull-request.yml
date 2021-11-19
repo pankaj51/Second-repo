@@ -39,16 +39,17 @@ jobs:
     #     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Create E2E folder
+      - name: download actions 
         #         run: mkdir e2e
         #       - name: Navigate to E2E folder
         #         run: cd ./e2e
         #       - name: Cloning automation repository
         #         run: git clone "https://github.com/houseworksinc/emr-frontend-automation.git"
-        # uses: actions/checkout@main
+        uses: actions/checkout@main
         # with:
           # repository: pankaj51/Pj-practice
       #           path: ./e2e
+      - name: download pj repo
         uses: pankaj51/Pj-practice@main
         with: 
           github_token: ${{ secrets.G_ACCESS_TOKEN }}
